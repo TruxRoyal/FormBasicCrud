@@ -68,15 +68,13 @@ npx prisma generate
 ```bash
 npx prisma migrate dev
 ```
-Explorar la base de datos: Usa Prisma Studio para ver y modificar los registros en la base de datos:
-bash
-Copiar código
+3.) Explorar la base de datos: Usa Prisma Studio para ver y modificar los registros en la base de datos:
+```bash
 npx prisma studio
-Despliegue
+```
+## Despliegue
 El despliegue de este proyecto se puede realizar en Vercel, ya que es la plataforma recomendada para Next.js.
-
-Si aún no tienes una cuenta, regístrate en Vercel.
-Conecta tu repositorio y sigue los pasos para desplegar tu aplicación.
+  Conecta tu repositorio y sigue los pasos para desplegar tu aplicación.
 Para más detalles sobre cómo desplegar en Vercel, visita la documentación oficial.
 
 Contribuciones
