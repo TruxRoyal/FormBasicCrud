@@ -77,5 +77,10 @@ El despliegue de este proyecto se puede realizar en Vercel, ya que es la platafo
   Conecta tu repositorio y sigue los pasos para desplegar tu aplicación.
 Para más detalles sobre cómo desplegar en Vercel, visita la documentación oficial.
 
+## Base de datos
+### modelo relacional
+<img width="602" alt="image" src="https://github.com/user-attachments/assets/d7536515-c16c-47f1-bbd1-2bc7fbdc88b2">
+
+
 Contribuciones
 ¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto, siéntete libre de hacer un fork y enviar un pull request.
