@@ -81,6 +81,9 @@ Para más detalles sobre cómo desplegar en Vercel, visita la documentación ofi
 ### Modelo relacional
 <img width="602" alt="image" src="https://github.com/user-attachments/assets/d7536515-c16c-47f1-bbd1-2bc7fbdc88b2">
 
+## APIS
+Para más detalles, puedes acceder a la descripción completa de todos los endpoints de esta API, con ejemplos de solicitudes y respuestas, en la siguiente documentación de Postman:
+[Documentación de Endpoints en Postman](https://documenter.getpostman.com/view/23249924/2sAXxMhE3J)
 
 Contribuciones
 ¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto, siéntete libre de hacer un fork y enviar un pull request.
