@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model cities {
+  id       Int        @id @default(autoincrement())
+  id_state Int
+  name     String     @db.VarChar(100)
+  states   states     @relation(fields: [id_state], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_cities_states")
+  usuarios usuarios[]
+
+  @@index([id_state], map: "fk_cities_states")
+}
+
+model countries {
+  id       Int        @id @default(autoincrement())
+  name     String     @db.VarChar(100)
+  states   states[]
+  usuarios usuarios[]
+}
+
+model states {
+  id         Int        @id @default(autoincrement())
+  id_country Int
+  name       String     @db.VarChar(100)
+  cities     cities[]
+  countries  countries  @relation(fields: [id_country], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_states_countries")
+  usuarios   usuarios[]
+
+  @@index([id_country], map: "fk_states_countries")
+}
+
+model usuarios {
+  email            String    @id @db.VarChar(255)
+  nombre           String?   @db.VarChar(100)
+  apellido         String?   @db.VarChar(100)
+  sexo             String?   @db.VarChar(20)
+  fecha_nacimiento DateTime? @db.Date
+  direccion        String?   @db.VarChar(255)
+  vivienda         String?   @db.VarChar(50)
+  id_country       Int
+  id_state         Int
+  id_city          Int
+  pais             String?   @db.VarChar(100)
+  estado           String?   @db.VarChar(100)
+  ciudad           String?   @db.VarChar(100)
+  observacion      String?   @db.Text
+  cities           cities    @relation(fields: [id_city], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_usuarios_cities")
+  countries        countries @relation(fields: [id_country], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_usuarios_countries")
+  states           states    @relation(fields: [id_state], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_usuarios_states")
+
+  @@index([id_city], map: "fk_usuarios_cities")
+  @@index([id_country], map: "fk_usuarios_countries")
+  @@index([id_state], map: "fk_usuarios_states")
+}
