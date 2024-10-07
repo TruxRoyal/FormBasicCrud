@@ -24,7 +24,7 @@ Asegúrate de tener instalados los siguientes requisitos antes de comenzar:
 git clone https://github.com/usuario/form-basic-crud.git
 cd form-basic-crud
 ```
-## Instalar dependencias
+### Instalar dependencias
 ```bash
 npm install
 # o
@@ -32,7 +32,7 @@ yarn install
 # o
 pnpm install
 ```
-## Configurar la base de datos
+### Configurar la base de datos
 Este proyecto usa Prisma para la gestión de la base de datos. Debes configurar tu base de datos MySQL y ajustar las credenciales en el archivo .env.
 
 1.) Crea un archivo .env en la raíz del proyecto si no existe:
@@ -58,7 +58,7 @@ pnpm dev
 
 Abre http://localhost:3000 en tu navegador para ver el proyecto en acción.
 
-## Uso de Prisma
+### Uso de Prisma
 Este proyecto utiliza Prisma para realizar las consultas de la base de datos. A continuación, algunos comandos útiles:
 1.) Generar Prisma Client: Si haces cambios en el esquema de Prisma (prisma/schema.prisma), ejecuta el siguiente comando para regenerar el cliente de Prisma:
 ```bash
