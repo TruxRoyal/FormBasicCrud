@@ -1,40 +1,85 @@
-<<<<<<< HEAD
 # FormBasicCrud
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+Este es un proyecto desarrollado con [Next.js](https://nextjs.org), que ofrece una interfaz para realizar operaciones básicas de CRUD (Crear, Leer, Actualizar y Eliminar) sobre un formulario de contacto. El proyecto también incluye la integración con Prisma para manejar la base de datos.
 
-First, run the development server:
+## Características
+
+- Formulario para gestionar registros de contacto con campos como nombre, dirección, email, observaciones, etc.
+- Uso de Prisma para la interacción con la base de datos (MySQL).
+- Generación de PDFs con información del contacto y descarga de datos en formato JSON.
+- Implementación de UI moderna con componentes de interfaz reutilizables.
+
+## Requisitos previos
+
+Asegúrate de tener instalados los siguientes requisitos antes de comenzar:
+
+- [Node.js](https://nodejs.org/) v16 o superior.
+- [MySQL](https://www.mysql.com/) para la base de datos.
+
+## Instalación
+
+### Clonar el repositorio
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/usuario/form-basic-crud.git
+cd form-basic-crud
 ```
+Instalar dependencias
+bash
+Copiar código
+npm install
+# o
+yarn install
+# o
+pnpm install
+Configurar la base de datos
+Este proyecto usa Prisma para la gestión de la base de datos. Debes configurar tu base de datos MySQL y ajustar las credenciales en el archivo .env.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Crea un archivo .env en la raíz del proyecto si no existe:
+makefile
+Copiar código
+DATABASE_URL="mysql://usuario:contraseña@localhost:3306/nombre_base_datos"
+Ejecuta las migraciones de Prisma para generar las tablas necesarias:
+bash
+Copiar código
+npx prisma migrate dev --name init
+Para visualizar y explorar la base de datos, puedes usar Prisma Studio:
+bash
+Copiar código
+npx prisma studio
+Iniciar el servidor de desarrollo
+Inicia el servidor de desarrollo local:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+bash
+Copiar código
+npm run dev
+# o
+yarn dev
+# o
+pnpm dev
+Abre http://localhost:3000 en tu navegador para ver el proyecto en acción.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Uso de Prisma
+Este proyecto utiliza Prisma para realizar las consultas de la base de datos. A continuación, algunos comandos útiles:
 
-## Learn More
+Generar Prisma Client: Si haces cambios en el esquema de Prisma (prisma/schema.prisma), ejecuta el siguiente comando para regenerar el cliente de Prisma:
+bash
+Copiar código
+npx prisma generate
+Aplicar Migraciones: Si has modificado el esquema de la base de datos, puedes aplicar las migraciones usando:
+bash
+Copiar código
+npx prisma migrate dev
+Explorar la base de datos: Usa Prisma Studio para ver y modificar los registros en la base de datos:
+bash
+Copiar código
+npx prisma studio
+Despliegue
+El despliegue de este proyecto se puede realizar en Vercel, ya que es la plataforma recomendada para Next.js.
 
-To learn more about Next.js, take a look at the following resources:
+Si aún no tienes una cuenta, regístrate en Vercel.
+Conecta tu repositorio y sigue los pasos para desplegar tu aplicación.
+Para más detalles sobre cómo desplegar en Vercel, visita la documentación oficial.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> master
+Contribuciones
+¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto, siéntete libre de hacer un fork y enviar un pull request.
