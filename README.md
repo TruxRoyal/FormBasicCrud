@@ -78,7 +78,7 @@ El despliegue de este proyecto se puede realizar en Vercel, ya que es la platafo
 Para más detalles sobre cómo desplegar en Vercel, visita la documentación oficial.
 
 ## Base de datos
-### modelo relacional
+### Modelo relacional
 <img width="602" alt="image" src="https://github.com/user-attachments/assets/d7536515-c16c-47f1-bbd1-2bc7fbdc88b2">
 
 
