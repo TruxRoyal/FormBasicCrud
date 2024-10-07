@@ -24,52 +24,50 @@ Asegúrate de tener instalados los siguientes requisitos antes de comenzar:
 git clone https://github.com/usuario/form-basic-crud.git
 cd form-basic-crud
 ```
-Instalar dependencias
-bash
-Copiar código
+## Instalar dependencias
+```bash
 npm install
 # o
 yarn install
 # o
 pnpm install
-Configurar la base de datos
+```
+## Configurar la base de datos
 Este proyecto usa Prisma para la gestión de la base de datos. Debes configurar tu base de datos MySQL y ajustar las credenciales en el archivo .env.
 
-Crea un archivo .env en la raíz del proyecto si no existe:
-makefile
-Copiar código
+1.) Crea un archivo .env en la raíz del proyecto si no existe:
+```bash
 DATABASE_URL="mysql://usuario:contraseña@localhost:3306/nombre_base_datos"
-Ejecuta las migraciones de Prisma para generar las tablas necesarias:
-bash
-Copiar código
+```
+2.) Ejecuta las migraciones de Prisma para generar las tablas necesarias:
+```bash
 npx prisma migrate dev --name init
-Para visualizar y explorar la base de datos, puedes usar Prisma Studio:
-bash
-Copiar código
+```
+3.) Para visualizar y explorar la base de datos, puedes usar Prisma Studio:
+```bash
 npx prisma studio
-Iniciar el servidor de desarrollo
-Inicia el servidor de desarrollo local:
-
-bash
-Copiar código
+```
+4.) Inicia el servidor de desarrollo local:
+```bash
 npm run dev
 # o
 yarn dev
 # o
 pnpm dev
+```
+
 Abre http://localhost:3000 en tu navegador para ver el proyecto en acción.
 
-Uso de Prisma
+## Uso de Prisma
 Este proyecto utiliza Prisma para realizar las consultas de la base de datos. A continuación, algunos comandos útiles:
-
-Generar Prisma Client: Si haces cambios en el esquema de Prisma (prisma/schema.prisma), ejecuta el siguiente comando para regenerar el cliente de Prisma:
-bash
-Copiar código
+1.) Generar Prisma Client: Si haces cambios en el esquema de Prisma (prisma/schema.prisma), ejecuta el siguiente comando para regenerar el cliente de Prisma:
+```bash
 npx prisma generate
-Aplicar Migraciones: Si has modificado el esquema de la base de datos, puedes aplicar las migraciones usando:
-bash
-Copiar código
+```
+2.) Aplicar Migraciones: Si has modificado el esquema de la base de datos, puedes aplicar las migraciones usando:
+```bash
 npx prisma migrate dev
+```
 Explorar la base de datos: Usa Prisma Studio para ver y modificar los registros en la base de datos:
 bash
 Copiar código
